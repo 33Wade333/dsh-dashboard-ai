@@ -43,6 +43,8 @@
     "url": "https://github.com/yourname/dsh-dashboard.git"
   },
   "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
     "dashboard",
     "analytics",
     "visualization",
