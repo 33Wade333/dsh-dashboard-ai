@@ -634,7 +634,7 @@ renderDomain(0);
 
 window.addEventListener("resize", () => charts.forEach(ch => ch.resize()));
 
-// 2026-09-22 全屏可逆化（同步自数智罗盘集成版）：点一次原地全屏，再点一次或按 ESC 缩回。
+// 2026-09-22 全屏可逆化（全屏可逆化）：点一次原地全屏，再点一次或按 ESC 缩回。
 // 沙箱 iframe 禁全屏时降级为新标签页（DSH 右侧栏场景）。
 function toggleFullscreen() {
   const btn = document.getElementById("fsBtn");

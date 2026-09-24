@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-通用指标看板渲染核心 v3 —— 逐像素复刻数智罗盘 Stripe 式设计系统
+通用指标看板渲染核心 v3 —— 飞书风格 Stripe 式设计系统
 (config v2: components[] + 24 列网格 + 类型注册表；v1 四段是语法糖零改动兼容)
-每个组件的视觉层严格按数智罗盘 styles.css 4262-4968 行 db2- 段的精确值复刻。
+每个组件的视觉层按飞书设计系统精确值构建。
 """
 import argparse, json, re, sqlite3, sys, math
 from pathlib import Path
 from datetime import datetime
 import yaml
 
-# ===== 数智罗盘精确设计 Token =====
+# ===== 设计 Token（飞书风格） =====
 INK = "#1f2329"; INK2 = "#373c43"; SUB = "#646a73"; MUTE = "#8f959e"; FAINT = "#aeb4bd"
 BORDER_S = "#dee0e3"; SPLIT = "#eff0f2"; LAYER = "#f2f3f5"
 BD = "rgba(16,24,40,.07)"; BD_HOVER = "rgba(16,24,40,.12)"
@@ -26,7 +26,7 @@ GRID_COLS = 24
 FONT = '"Inter","Microsoft YaHei",system-ui,sans-serif'
 
 TYPE_DEFAULTS = {
-    # 非对称双栏模式（数智罗盘 duo 同款）：主图宽(16) 配副图窄(8)，视觉有主次不呆板
+    # 非对称双栏模式：主图宽(16) 配副图窄(8)，视觉有主次不呆板
     # 自然配对：line(16)+bar(8) / line(16)+pie(8) / funnel(16)+bullet(8) / area_stack(16)+gauge(8)
     # 等宽配对：histogram(12)+scatter(12)
     # 全宽：heatmap(24) / table(24) / heading(24) / text(24)
