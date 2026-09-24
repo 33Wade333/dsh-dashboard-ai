@@ -50,6 +50,14 @@ dsh plugin add github:33Wade333/dsh-dashboard-ai
 ![Dashboard Overview](screenshots/dashboard-05.png)
 *看板总览 — 多域切换 + KPI + 图表 + 明细 | Overview — Multi-domain + KPI + Charts + Details*
 
+## 搭配使用 | Companion
+
+本插件搭配 **data-model-builder** Skill 使用效果最佳——Skill 教 AI 从零建数据模型（四层数仓+口径统一），插件负责把建好的数据变成可交互看板。
+
+**Pair with the data-model-builder Skill** for the full experience — the Skill teaches AI to build data models (4-layer warehouse + unified calibers), this plugin turns the data into interactive dashboards.
+
+👉 https://github.com/33Wade333/data-model-builder
+
 ## License
 
 MIT
