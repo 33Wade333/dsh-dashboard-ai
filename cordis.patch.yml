@@ -1,0 +1,6 @@
+# dsh-dashboard-ai bundle patch: 通用指标看板插件。
+# 一个包两个半侧：宿主半（lib/index.js，render_dashboard 工具）与
+# 浏览器半（lib/client.js，右侧栏 dashboard tab）。随包安装即启用。
+- insert:
+    - id: dashboard
+      name: 'dsh-dashboard-ai'

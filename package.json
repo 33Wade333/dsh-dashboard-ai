@@ -1,0 +1,54 @@
+{
+  "name": "dsh-dashboard-ai",
+  "description": "AI 通用看板——说一句话自动生成可交互分析面板，支持维度下钻到明细，飞书风格，单文件离线",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "scripts/",
+    "docs/",
+    "screenshots/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-workspace-files",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/dsh-dashboard.git"
+  },
+  "keywords": [
+    "dashboard",
+    "analytics",
+    "visualization",
+    "feishu",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT"
+}
